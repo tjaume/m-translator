@@ -8,13 +8,13 @@
 
 命令：cmd+shift+p(mac) -> 输入：translate2en
 快捷键：`cmd+shift+e(mac)`、`ctrl+shift+e(win)`
-![](./img/2.gif)
+![](https://raw.githubusercontent.com/tjaume/m-translator/master/img/2.gif)
 
 ### 英文->中文
 
 命令：cmd+shift+p(mac) -> 输入：translate2cn
 快捷键：`cmd+shift+c(mac)`、`ctrl+shift+c(win)`
-![](./img/1.gif)
+![](https://raw.githubusercontent.com/tjaume/m-translator/master/img/1.gif)
 
 ### For more information
 
