@@ -4,6 +4,8 @@ import GoogleTranslator, {
 } from 'google-translate-unlimited-api';
 import { writeSync } from 'clipboardy';
 
+let opc: vscode.OutputChannel;
+
 function translate2cn() {
     return vscode.commands.registerCommand('translate.cn', async () => {
         await translate('zh-CN', '翻译：请输入英文');
@@ -17,6 +19,9 @@ function translate2en() {
 }
 
 async function translate(to: string, msg: string) {
+    if (!opc) {
+        opc = vscode.window.createOutputChannel('m-translator');
+    }
     const word = await vscode.window.showInputBox({
         password: false,
         ignoreFocusOut: true,
@@ -46,9 +51,7 @@ async function translate(to: string, msg: string) {
         if (select) {
             console.log(select);
             writeSync(select.label);
-            vscode.window.showInformationMessage(
-                `[${select.label}]已复制至剪贴板`
-            );
+            opc.appendLine(`${select.label}:${select.detail}`);
         }
     }
 }
