@@ -49,9 +49,9 @@ async function translate(to: string, msg: string) {
             placeHolder: '按"Enter"以复制或按"Esc"以取消'
         });
         if (select) {
-            console.log(select);
             writeSync(select.label);
             opc.appendLine(`${select.label}:${select.detail}`);
+            opc.show();
         }
     }
 }
