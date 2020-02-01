@@ -1,0 +1,72 @@
+{
+    "name": "m-translator",
+    "displayName": "m-translator",
+    "description": "google translate",
+    "publisher": "tjaume",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.41.0"
+    },
+    "keywords": [
+        "Google",
+        "Translate",
+        "english",
+        "chinese"
+    ],
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "onCommand:translate.cn",
+        "onCommand:translate.en"
+    ],
+    "main": "./out/extension.js",
+    "contributes": {
+        "commands": [
+            {
+                "command": "translate.cn",
+                "title": "translate2cn"
+            },
+            {
+                "command": "translate.en",
+                "title": "translate2en"
+            }
+        ],
+        "keybindings": [
+            {
+                "command": "translate.cn",
+                "key": "ctrl+shift+c",
+                "mac": "cmd+shift+c",
+                "when": ""
+            },
+            {
+                "command": "translate.en",
+                "key": "ctrl+shift+e",
+                "mac": "cmd+shift+e",
+                "when": ""
+            }
+        ]
+    },
+    "scripts": {
+        "vscode:prepublish": "yarn run compile",
+        "compile": "tsc -p ./",
+        "watch": "tsc -watch -p ./",
+        "pretest": "yarn run compile",
+        "test": "node ./out/test/runTest.js"
+    },
+    "devDependencies": {
+        "@types/glob": "^7.1.1",
+        "@types/mocha": "^5.2.7",
+        "@types/node": "^12.11.7",
+        "@types/vscode": "^1.41.0",
+        "glob": "^7.1.5",
+        "mocha": "^6.2.2",
+        "tslint": "^5.20.0",
+        "typescript": "^3.6.4",
+        "vscode-test": "^1.2.2"
+    },
+    "dependencies": {
+        "clipboardy": "^2.1.0",
+        "google-translate-unlimited-api": "^0.0.3"
+    }
+}
