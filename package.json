@@ -3,9 +3,9 @@
     "displayName": "m-translator",
     "description": "google translate",
     "publisher": "tjaume",
-    "version": "0.0.6",
+    "version": "0.0.7",
     "engines": {
-        "vscode": "^1.41.0"
+        "vscode": "^1.30.0"
     },
     "repository": "git@github.com:tjaume/m-translator.git",
     "author": {
